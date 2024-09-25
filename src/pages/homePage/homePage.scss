@@ -1,0 +1,11 @@
+@import '../../main.scss';
+
+.page-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  .no-results {
+    padding-inline: 5vw;
+    font-size: 18px;
+    color: $text-primary;
+  }
+}

@@ -1,0 +1,191 @@
+@import '../../main.scss';
+
+.details-popup {
+  position: fixed;
+  top: 7rem;
+  width: 100%;
+  z-index: 10;
+  max-width: 1600px;
+  .details-container {
+    margin-inline: 5vw;
+    background-color: $background-quaternary;
+    padding-inline: 2rem;
+    padding-block: 4vh;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+    .images-container {
+      width: 45%;
+    }
+    .product-info-container {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      color: $text-primary;
+      h2 {
+        font-size: 3vw;
+        margin-bottom: 2vw;
+      }
+      .description {
+        font-size: 1.5vw;
+        margin-bottom: 2vw;
+      }
+      .price-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2vw;
+        margin-bottom: 2vw;
+        .discount-price {
+          font-size: 2vw;
+        }
+        .price {
+          font-size: 1vw;
+          text-decoration: line-through;
+          color: $text-secondary;
+        }
+      }
+    }
+  }
+  .close-icon {
+    position: absolute;
+    top: 1rem;
+    right: 7vw;
+    font-size: 24px;
+    color: $text-primary;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .details-popup {
+    position: fixed;
+    top: 12vh;
+    width: 100%;
+    z-index: 10;
+    max-width: 1600px;
+    .details-container {
+      margin-inline: 5vw;
+      background-color: $background-quaternary;
+      padding-inline: 2rem;
+      padding-block: 4vh;
+      border-radius: 45px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10%;
+      .images-container {
+        width: 45%;
+      }
+      .product-info-container {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        color: $text-primary;
+        h2 {
+          font-size: 4vw;
+          margin-bottom: 2vw;
+        }
+        .description {
+          font-size: 1.5vw;
+          margin-bottom: 2vw;
+        }
+        .price-section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2vw;
+          margin-bottom: 2vw;
+          .discount-price {
+            font-size: 3vw;
+          }
+          .price {
+            font-size: 2vw;
+            text-decoration: line-through;
+            color: $text-secondary;
+          }
+        }
+      }
+    }
+    .close-icon {
+      position: absolute;
+      top: 1rem;
+      right: 7vw;
+      font-size: 24px;
+      color: $text-primary;
+      cursor: pointer;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .details-popup {
+    position: fixed;
+    top: 12vh;
+    width: 100%;
+    z-index: 10;
+    max-width: 1600px;
+    .details-container {
+      margin-inline: 5vw;
+      background-color: $background-quaternary;
+      padding-inline: 2rem;
+      padding-block: 4vh;
+      border-radius: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5vh;
+      .images-container {
+        width: 100%;
+      }
+      .product-info-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        color: $text-primary;
+        h2 {
+          font-size: 26px;
+          margin-bottom: 2vh;
+        }
+        .description {
+          font-size: 16px;
+          margin-bottom: 2vh;
+        }
+        .price-section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 2vw;
+          margin-bottom: 2vh;
+          .discount-price {
+            font-size: 22px;
+          }
+          .price {
+            font-size: 18px;
+            text-decoration: line-through;
+            color: $text-secondary;
+          }
+        }
+      }
+    }
+    .close-icon {
+      position: absolute;
+      top: 1rem;
+      right: 10vw;
+      font-size: 24px;
+      color: $text-primary;
+      cursor: pointer;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+}
