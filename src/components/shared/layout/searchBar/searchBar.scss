@@ -1,0 +1,66 @@
+@import '../../../../main.scss';
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  input {
+    width: 25rem;
+    height: 2rem;
+    font-size: 18px;
+    border-radius: 15px;
+    padding-left: 1rem;
+    margin-right: 1rem;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: $background-primary;
+    color: $text-primary;
+    &:focus {
+      border-color: $primary;
+    }
+    &::placeholder {
+      color: $text-primary;
+    }
+  }
+  button {
+    width: max-content;
+    background-color: transparent;
+    border: none;
+    color: $text-primary;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .search-bar {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    input {
+      width: 70vw;
+      height: 2rem;
+      font-size: 18px;
+      border-radius: 15px;
+      padding-left: 1rem;
+      margin-right: 1rem;
+      border: 1px solid transparent;
+      outline: none;
+      background-color: $background-primary;
+      color: $text-primary;
+      &:focus {
+        border-color: $primary;
+      }
+      &::placeholder {
+        color: $text-primary;
+      }
+    }
+    button {
+      width: max-content;
+      background-color: transparent;
+      border: none;
+      color: $text-primary;
+      cursor: pointer;
+    }
+  }
+}

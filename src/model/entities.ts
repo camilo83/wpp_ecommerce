@@ -1,18 +1,3 @@
-# Ecommerce Wpp
-
-## Despliegue APP
-
-La aplicación está desarrollada utilizando el framework de JavaScript, React, y emplea Vite como compilador/bundler. Para iniciar la aplicación en modo de desarrollo, debes ejecutar el siguiente comando en la terminal:
-
-```bash
-npm run dev
-```
-
-## Modelo de datos
-
-Para la creación de una tienda eCommerce que se ajuste a cualquier API, debemos contar con un modelo de datos similar a este:
-
-```typescript
 export type Product = {
   id: number;
   attributes: {
@@ -26,7 +11,7 @@ export type Product = {
     categories: Category[];
     variations: Variation;
     brand: Brand;
-    collection: Collection;
+    colection: Collection;
     isFavorite: boolean;
   };
 };
@@ -66,6 +51,7 @@ export type Category = {
     categories?: {
       data: Category[];
     };
+
     parent?: {
       data: Category;
     };
@@ -85,6 +71,9 @@ export type Variation = {
       attributes: Attribute;
       attribute_values: AttributeValue;
       images: Images;
+      product: {
+        data: Product;
+      };
     };
   }[];
 };
@@ -120,16 +109,3 @@ export type Collection = {
   slug: string;
   products: Product[];
 };
-```
-
-## Base de datos
-
-La aplicación se conecta a un backend gestionado por Strapi, utilizando el modelo de datos descrito anteriormente. Actualmente, este backend no está desplegado en un entorno accesible por Internet, lo que significa que la aplicación no funcionará correctamente en producción debido a la falta de una URL pública para las peticiones API.
-
-## Compilación
-
-Para compilar la aplicación, ejecuta el siguiente comando en la terminal:
-
-```bash
-npm run build
-```

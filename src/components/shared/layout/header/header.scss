@@ -1,0 +1,105 @@
+@import '../../../../main.scss';
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 5vw;
+  z-index: 1;
+  background-color: $background-secondary;
+
+  .header-desktop {
+    margin: 0 auto;
+    max-width: 1600px;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      height: 8rem;
+      cursor: pointer;
+    }
+
+    .total-items {
+      position: relative;
+      font-size: 1.2rem;
+      color: $text-primary;
+      .cart-count {
+        position: absolute;
+        border: 1px solid $background-primary;
+        top: -12px;
+        right: -10px;
+        background: $background-tertiary;
+        color: $text-primary;
+        border-radius: 50%;
+        padding: 0.16rem 0.4rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .header-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    .header-desktop {
+      display: none;
+    }
+    .header-mobile {
+      display: flex;
+      flex-direction: column;
+      height: 10vh;
+      .close-search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
+        justify-content: space-between;
+        img {
+          height: 100%;
+          cursor: pointer;
+        }
+        .total-items {
+          position: relative;
+          font-size: 1.2rem;
+          color: $text-primary;
+          .cart-count {
+            position: absolute;
+            border: 1px solid $background-primary;
+            top: -12px;
+            right: -10px;
+            background: $background-tertiary;
+            color: $text-primary;
+            border-radius: 50%;
+            padding: 0.16rem 0.4rem;
+            font-size: 0.8rem;
+          }
+        }
+        svg {
+          color: $text-primary;
+          font-size: 1rem;
+        }
+      }
+      .open-search {
+        height: 6rem;
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        svg {
+          color: $text-primary;
+          font-size: 1rem;
+        }
+        .close-bar {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

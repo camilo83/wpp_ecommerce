@@ -1,0 +1,191 @@
+@import '../../main.scss';
+
+.category-banner {
+  margin-inline: 5vw;
+  background-color: $background-tertiary;
+  border-radius: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 5vw;
+  overflow: hidden;
+
+  .arrow {
+    visibility: hidden;
+    font-size: 2rem;
+    color: $text-primary;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .product-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 20rem;
+    transition: transform 0.5s ease-in-out;
+
+    .banner-image-container {
+      height: 18rem;
+
+      img {
+        width: 18rem;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 99999px;
+      }
+    }
+    .product-info {
+      .product-name {
+        font-size: 48px;
+        font-weight: 700;
+        color: $text-primary;
+        margin-bottom: 2rem;
+        width: max-content;
+      }
+      .price-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        p {
+          font-size: 24px;
+          font-weight: 700;
+          color: $text-primary;
+        }
+      }
+    }
+  }
+}
+.category-banner .arrow.visible {
+  visibility: visible;
+}
+
+@media screen and (max-width: 840px) {
+  .category-banner {
+    margin-inline: 5vw;
+    background-color: $background-tertiary;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5vw;
+
+    .arrow {
+      visibility: hidden;
+      font-size: 1.5rem;
+      color: $text-primary;
+    }
+
+    .product-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 16rem;
+      .banner-image-container {
+        height: 14rem;
+        img {
+          width: 14rem;
+          object-fit: cover;
+          border-radius: 99999px;
+        }
+      }
+      .product-info {
+        .product-name {
+          font-size: 32px;
+          font-weight: 700;
+          color: $text-primary;
+          margin-bottom: 2rem;
+          width: max-content;
+        }
+        .price-section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 2rem;
+          p {
+            font-size: 20px;
+            font-weight: 700;
+            color: $text-primary;
+          }
+        }
+      }
+    }
+  }
+  .category-banner .arrow.visible {
+    visibility: visible;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .category-banner {
+    margin-inline: 5vw;
+    background-color: $background-tertiary;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 5vw;
+
+    .arrow {
+      visibility: hidden;
+      font-size: 1.5rem;
+      color: $text-primary;
+    }
+
+    .product-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 20rem;
+      .banner-image-container {
+        height: 10rem;
+        img {
+          width: 10rem;
+          object-fit: cover;
+          border-radius: 99999px;
+        }
+      }
+      .product-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .product-name {
+          font-size: 24px;
+          font-weight: 700;
+          color: $text-primary;
+          margin-bottom: 1rem;
+          width: max-content;
+        }
+        .price-section {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          p {
+            font-size: 16px;
+            font-weight: 700;
+            color: $text-primary;
+          }
+        }
+      }
+    }
+  }
+  .category-banner .arrow.visible {
+    visibility: visible;
+  }
+}
